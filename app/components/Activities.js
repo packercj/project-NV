@@ -6,7 +6,6 @@ class Activities extends React.Component {
     super(props);
     this.activities = this.activities.bind(this);
     this.getActivities = this.getActivities.bind(this);
-    // this.addActivites = this.addActivites.bind(this);
     this.baseUrl = "http://nuvi-challenge.herokuapp.com/activities";
     this.state = { activities: [] };
   }
@@ -19,19 +18,6 @@ getActivities() {
     this.setState({ activities });
   }).fail(() => {  })
 }
-
-// deleteProducts(id) {
-//   this.setState({
-//     products: this.state.products.filter( p => p.id !== id)
-//   });
-//   $.ajax({
-//     url: `${this.baseUrl}/products/${id}`,
-//     type: 'DELETE'
-//   }).fail( () => {
-//     alert('Product failed to delete');
-//     this.getProducts;
-//   });
-// }
 
 activities(){
   return this.state.activities.map( activity => {
@@ -51,25 +37,6 @@ activities(){
   });
 }
 
-// addProduct(e) {
-//   e.preventDefault();
-//   $.ajax({
-//     url: `${this.baseUrl}/activities`,
-//     type: 'POST',
-//     data: {
-//       product: {
-//         name: this.refs.name.value,
-//         description: this.refs.description.value,
-//         base_price: this.refs.base_price.value
-//       }
-//     }
-//   }).done( product => {
-//     if (this.state.products.length === 0)
-//     this.getProducts();
-//     this.setState({ products: [{...product}, ...this.state.products]});
-//     this.refs.addForm.reset();
-//   });
-// }
 
   render() {
     return (

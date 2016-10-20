@@ -33,7 +33,7 @@ class Tweets extends React.Component {
   render() {
     return (
       <div>
-        <h3 className="center">Tweets</h3>
+        <h3 className="center">Search for Actor Tweets</h3>
         <form ref="tweetForm" onSubmit={this.getTweets}>
           <input ref="handle" placeholder="handle"></input>
         </form>

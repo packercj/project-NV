@@ -36,7 +36,8 @@ activities(){
     )
   });
 }
-
+//this function will add to the actor_likes
+//this function will remove 1 like from the actor
 
   render() {
     return (
